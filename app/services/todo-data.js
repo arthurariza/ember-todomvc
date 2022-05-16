@@ -19,7 +19,7 @@ export default class TodoDataService extends Service {
   }
 
   get incomplete() {
-    return this.todos.filterBy('isCompleted', 'false');
+    return this.todos.filter(({ isCompleted }) => !isCompleted);
   }
 
   get todoCountIsOne() {
