@@ -37,4 +37,9 @@ export default class TodoDataService extends Service {
   clearCompleted() {
     this.todos = this.incomplete;
   }
+
+  @action
+  toggleCompletion(todo) {
+    todo.isCompleted = !todo.isCompleted;
+  }
 }
